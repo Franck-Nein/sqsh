@@ -2,6 +2,8 @@
 
 Poorly done script to easily compress a file or folder using mksquashfs with (probably) the best compression ratio(still needs more testing).
 
+(This could have been easily done as a bash script, but I chose Python to make it a little more compatible)
+
 By default, the output file will be created on your current directory using the name of your target + .sqsh unless you specify an output file, it will overwrite it if it already exists.
 
 ## Usage
