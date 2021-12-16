@@ -4,7 +4,7 @@ var1 = sys.argv[1]
 try:
  var2 = sys.argv[2]
 except:
- var2 = var1.replace('/','')
+ var2 = var1.strip('/').replace('/','-')
 print('Compressing "' + var1 + '" into ' + var2 + '.sqsh')
 print('mksquashfs "' + var1 + '" "' + var2 + '.sqsh" -b 1048576 -comp xz -Xdict-size 100%')
 os.system ('mksquashfs "' + var1 + '" "' + var2 + '.sqsh" -b 1048576 -comp xz -Xdict-size 100%')
