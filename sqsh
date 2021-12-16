@@ -6,5 +6,6 @@ try:
 except:
  var2 = var1.strip('/').replace('/','-')
 print('Compressing "' + var1 + '" into ' + var2 + '.sqsh')
-print('mksquashfs "' + var1 + '" "' + var2 + '.sqsh" -b 1048576 -comp xz -Xdict-size 100%')
-os.system ('mksquashfs "' + var1 + '" "' + var2 + '.sqsh" -b 1048576 -comp xz -Xdict-size 100%')
+command = ('mksquashfs "' + var1 + '" "' + var2 + '.sqsh" -b 1048576 -comp xz -Xdict-size 100%')
+print(command)
+os.system(command)
